@@ -9,7 +9,7 @@ dayone() async {
 partone() async {
   try {
     Directory current = Directory.current;
-    var config = File('${current.path}/lib/dayone.txt');
+    var config = File('${current.path}/lib/dayone/dayone.txt');
     Stream<List<int>> inputStream = config.openRead();
 
     int result = 0;
