@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../lib/day-one.dart';
+import '../lib/dayone/day-one.dart';
 
 Future main(List<String> arguments) async {
   stdout.writeln('Choose day');
