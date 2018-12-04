@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 
-dayone() async {
+dayOne() async {
   await partone();
   await parttwo();
 }
