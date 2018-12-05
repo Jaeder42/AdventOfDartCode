@@ -15,7 +15,9 @@ partone() async {
     var lines = inputStream.transform(utf8.decoder).transform(LineSplitter());
     try {
       await for (var line in lines) {
-        replaceAll(line);
+        String result = replaceAll(line);
+
+        print('Length of reacted polymer ${result.length}');
       }
     } catch (e) {
       print(e);
@@ -34,7 +36,7 @@ partTwo() async {
     var lines = inputStream.transform(utf8.decoder).transform(LineSplitter());
     try {
       await for (var line in lines) {
-        replaceAll(line);
+        findOptimal(line);
       }
     } catch (e) {
       print(e);
@@ -42,6 +44,22 @@ partTwo() async {
   } catch (e) {
     print(e);
   }
+}
+
+findOptimal(String line) {
+  int currMin = line.length;
+  String unitToRemove = 'a';
+  for (String unit in units) {
+    String removed =
+        line.replaceAll(unit, '').replaceAll(unit.toUpperCase(), '');
+    String result = replaceAll(removed);
+    if (result.length < currMin) {
+      currMin = result.length;
+      unitToRemove = unit;
+    }
+  }
+  print(
+      'Removing $unitToRemove/${unitToRemove.toUpperCase()} results in length: $currMin');
 }
 
 replaceAll(String line) {
@@ -54,8 +72,7 @@ replaceAll(String line) {
     }
     formatted = line.length;
   }
-  print(line);
-  print(line.length);
+  return line;
 }
 
 List<String> units = [
