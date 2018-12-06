@@ -99,7 +99,6 @@ getLargestArea(List<Coordinate> coordinates, List<List<int>> rows) {
   int largestArea = 0;
   int id = 0;
   List<int> invalids = getInvalid(rows);
-  print(invalids);
   for (Coordinate coordinate in coordinates) {
     if (invalids.indexOf(coordinate.id) < 0) {
       int area = calcArea(rows, coordinate.id);
@@ -136,7 +135,6 @@ getInvalid(List<List<int>> rows) {
     invalids.add(row[0]);
     invalids.add(row[row.length - 1]);
   }
-  print(invalids.length);
   List<int> distincts = invalids.toSet().toList();
   return distincts;
 }
