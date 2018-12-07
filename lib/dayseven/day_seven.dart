@@ -75,13 +75,11 @@ class Step extends Comparable {
 
   @override
   String toString() {
-    // TODO: implement toString
     return '$id : $prerequesites';
   }
 
   @override
   int compareTo(other) {
-    // TODO: implement compareTo
     return this.id.compareTo(other.id);
   }
 }
