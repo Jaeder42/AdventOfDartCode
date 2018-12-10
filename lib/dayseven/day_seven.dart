@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'dart:math';
 
 daySeven() async {
-  await partone();
+  await partOne();
   await partTwo();
 }
 
-partone() async {
+partOne() async {
   try {
     Directory current = Directory.current;
     var config = File('${current.path}/lib/dayseven/dayseven.txt');
@@ -66,7 +66,7 @@ partTwo() async {
       for (int i = 0; i < 5; i++) {
         elves.add(new WorkerElf());
       }
-      runPartTwo(new List<String>(), steps, elves, 0);
+      runpartTwo(new List<String>(), steps, elves, 0);
     } catch (e) {
       print(e);
     }
@@ -99,7 +99,7 @@ removeCompleted(String completed, List<Step> steps) {
   }
 }
 
-runPartTwo(
+runpartTwo(
     List<String> completed, List<Step> steps, List<WorkerElf> elves, int time) {
   if (steps.length < 1) {
     print('Completed in $time seconds');
@@ -123,7 +123,7 @@ runPartTwo(
       elf.unAssign();
     }
   }
-  return runPartTwo(completed, steps, elves, time += 1);
+  return runpartTwo(completed, steps, elves, time += 1);
 }
 
 class WorkerElf {

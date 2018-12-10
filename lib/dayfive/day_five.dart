@@ -2,11 +2,11 @@ import 'dart:io';
 import 'dart:convert';
 
 dayFive() async {
-  await partone();
+  await partOne();
   await partTwo();
 }
 
-partone() async {
+partOne() async {
   try {
     Directory current = Directory.current;
     var config = File('${current.path}/lib/dayfive/dayfive.txt');

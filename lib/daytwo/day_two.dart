@@ -2,11 +2,11 @@ import 'dart:io';
 import 'dart:convert';
 
 dayTwo() async {
-  await partone();
+  await partOne();
   await partTwo();
 }
 
-partone() async {
+partOne() async {
   int twos = 0;
   int threes = 0;
   try {

@@ -2,11 +2,11 @@ import 'dart:io';
 import 'dart:convert';
 
 dayOne() async {
-  await partone();
-  await parttwo();
+  await partOne();
+  await partTwo();
 }
 
-partone() async {
+partOne() async {
   try {
     Directory current = Directory.current;
     var config = File('${current.path}/lib/dayone/dayone.txt');
@@ -28,7 +28,7 @@ partone() async {
   }
 }
 
-parttwo() async {
+partTwo() async {
   print('Calculating, be patient');
   bool done = false;
   int result = 0;

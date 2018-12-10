@@ -2,10 +2,10 @@ import 'dart:io';
 import 'dart:convert';
 
 dayFour() async {
-  await partone();
+  await partOne();
 }
 
-partone() async {
+partOne() async {
   Directory current = Directory.current;
   var config = File('${current.path}/lib/dayfour/dayfour.txt');
   Stream<List<int>> inputStream = config.openRead();

@@ -2,11 +2,11 @@ import 'dart:io';
 import 'dart:convert';
 
 daySix() async {
-  await partone();
+  await partOne();
   await partwo();
 }
 
-partone() async {
+partOne() async {
   List<List<int>> rows = new List(400);
   for (int i = 0; i < rows.length; i++) {
     rows[i] = new List.filled(400, 0);
