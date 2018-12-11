@@ -51,7 +51,7 @@ Future main(List<String> arguments) async {
             print('Day 8 complete');
             break;
           case 9:
-            await dayNine();
+            dayNine();
             print('Day 9 complete');
             break;
           default:
