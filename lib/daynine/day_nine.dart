@@ -35,7 +35,6 @@ Future solve(int multiplier) {
         currentPlayer += 1;
       }
     }
-    print('Done, sorting');
     players.sort();
     print('result: ${players.last}');
     completer.complete();
