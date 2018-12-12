@@ -2,7 +2,7 @@
 
 > advent of dart code
 
-## Running
+## How to run!
 
 ```
 dart bin/main.dart
