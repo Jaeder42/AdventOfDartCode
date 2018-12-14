@@ -66,16 +66,6 @@ addGeneration(
     }
   }
   generations.add(nextGeneration);
-
-  // print('$generation: ${nextGeneration.join()}');
-  int result = 0;
-  for (int i = 0; i < length; i++) {
-    int potNr = i - (10);
-    if (nextGeneration[i] == '#') {
-      result += potNr;
-    }
-  }
-  print('generation: $generation result:$result');
 }
 
 class Rule {
