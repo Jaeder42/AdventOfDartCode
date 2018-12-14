@@ -10,6 +10,7 @@ import '../lib/dayeight/day_eight.dart';
 import '../lib/daynine/day_nine.dart';
 import '../lib/dayten/day_ten.dart';
 import '../lib/dayeleven/day_eleven.dart';
+import '../lib/daytwelve/day_twelve.dart';
 
 Future main(List<String> arguments) async {
   stdout.writeln('Choose day');
@@ -63,6 +64,10 @@ Future main(List<String> arguments) async {
           case 11:
             dayEleven();
             print('Day 11 complete');
+            break;
+          case 12:
+            await dayTwelve();
+            print('Day 12 complete');
             break;
           default:
             print('Day ${day} not yet implemented');
