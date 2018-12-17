@@ -26,7 +26,7 @@ dayFourteen() {
       }
       second = newSecond;
     }
-    print('NUmber of recipes before: ${recipes.join().indexOf(input)}');
+    print('Number of recipes before: ${recipes.join().indexOf(input)}');
   } catch (err) {
     print(err);
   }
